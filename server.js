@@ -3,6 +3,8 @@ const mongoose = require("mongoose")
 const connectMongoose = require("./controller/connectMongoose")
 const userRoute = require("./routes/userRoute")
 const postRoute = require("./routes/postRoute")
+const dotenv = require("dotenv");
+dotenv.config();
 
 const Port = 8000
 const app = express()
