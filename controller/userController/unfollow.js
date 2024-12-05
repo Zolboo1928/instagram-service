@@ -1,4 +1,4 @@
-const userModel = require("../models/userModel")
+const userModel = require("../../models/userModel");
 
 const unfollowUser = async (req,res)=>{
     const {unfollowerId , unfollowedUserId}=req.body

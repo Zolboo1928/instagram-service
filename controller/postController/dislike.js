@@ -1,4 +1,5 @@
-const postModel = require("../models/postModel")
+const postModel = require("../../models/postModel");
+
 
 const dislike = async (req,res)=>{
  try {

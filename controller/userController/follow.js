@@ -1,4 +1,4 @@
-const userModel = require("../models/userModel")
+const userModel = require("../../models/userModel");
 
 const createNewFollower = async (req,res)=>{
     const {followerId , followedUserId} = req.body

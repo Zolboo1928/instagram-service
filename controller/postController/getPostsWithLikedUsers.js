@@ -1,4 +1,5 @@
-const postModel = require("../models/postModel")
+const postModel = require("../../models/postModel")
+
 
 const getPostsWithLikedUsers = async (req,res)=>{
     try {

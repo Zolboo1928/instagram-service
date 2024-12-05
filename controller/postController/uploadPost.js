@@ -1,5 +1,7 @@
-const postModel = require("../models/postModel");
-const userModel = require("../models/userModel");
+
+const postModel = require("../../models/postModel");
+const userModel = require("../../models/userModel");
+
 
 const uploadPost = async (req,res)=>{
     const { title, postedUserImage, userId } = req.body;

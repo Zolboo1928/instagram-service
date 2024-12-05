@@ -1,4 +1,5 @@
-const postModel = require("../models/postModel")
+const postModel = require("../../models/postModel");
+
 
 const getPostById = async(req,res)=>{
     try {

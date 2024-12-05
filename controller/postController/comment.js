@@ -1,5 +1,6 @@
-const commentModel = require("../models/commentModel")
-const postModel = require("../models/postModel")
+const commentModel = require("../../models/commentModel");
+const postModel = require("../../models/postModel");
+
 
 const addComment = async (req,res) =>{
     const { comment, userId, commentedPostId } = req.body;
