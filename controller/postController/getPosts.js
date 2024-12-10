@@ -5,7 +5,8 @@ const getPosts = async (req,res) =>{
         const Posts = await postModel.find().populate("userId");
         res.send(Posts)
     } catch (error) {
-        res.send(error)
+        console.log(error)
+        res.json(error)
     }
 }
 module.exports = getPosts
