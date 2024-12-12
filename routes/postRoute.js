@@ -10,7 +10,7 @@ const dislike = require('../controller/postController/dislike.js');
 const getPosts = require('../controller/postController/getPosts.js');
 const postRoute = route()
  
-postRoute.post('/uploadPost',uploadPost )
+postRoute.post("/uploadPost", uploadPost);
 postRoute.post("/comment", addComment)
 postRoute.post("/like", like )
 postRoute.put("/dislike",dislike )

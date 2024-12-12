@@ -3,12 +3,14 @@ const signUp = require('../controller/userController/signup')
 const createNewFollower = require('../controller/userController/follow')
 const unfollowUser = require('../controller/userController/unfollow')
 const getUsers = require('../controller/userController/getUsers')
+const authMiddleware = require('../controller/authMiddleWare')
 const userRoute = route()
 
 userRoute.post('/signup', signUp)
-userRoute.post('/follow',createNewFollower )
-userRoute.post("/unfollow",unfollowUser )
-userRoute.get("/getUsers",getUsers)
+userRoute.get("/login", )
+userRoute.post("/follow" ,authMiddleware, createNewFollower);
+userRoute.post("/unfollow", authMiddleware, unfollowUser);
+userRoute.get("/getUsers", authMiddleware,getUsers);
 
 module.exports = userRoute
 
