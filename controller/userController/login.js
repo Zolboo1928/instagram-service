@@ -23,7 +23,7 @@ try {
                       followers: user.followers,
                 };
                 const loginToken = jwt.sign(infoInsideLoginToken, process.env.JWT_SECRET, {expiresIn:"24h"});
-                res.send({loginToken})
+                res.json({loginToken})
             } else {
                 res.send("didn't match")
             }
