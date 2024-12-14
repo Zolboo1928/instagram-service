@@ -10,8 +10,7 @@ try {
             process.env.JWT_SECRET
         );
         if(decodedtoken) {
-            res.send(decodedtoken)
-            // next()
+            next()
         }
 } catch (error) {
     res.send("invalid token");

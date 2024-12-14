@@ -20,7 +20,7 @@ const signUp = async (req, res) => {
       email:createdUser.email,
       profileImage:createdUser.profileImage
     }
-    const tokenSignUp = jwt.sign(jwtUser,jwtSecretKeySignUp)
+    const tokenSignUp = jwt.sign(jwtUser,jwtSecretKeySignUp,{expiresIn:"24h"})
     res.send(tokenSignUp);
   } catch (error) {
     console.error(error)
