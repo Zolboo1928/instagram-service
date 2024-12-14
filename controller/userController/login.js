@@ -22,8 +22,8 @@ try {
                       following: user.following,
                       followers: user.followers,
                 };
-                const loginToken = await jwt.sign(infoInsideLoginToken, process.env.JWT_SECRET, {expiresIn:"24h"});
-                res.send({infoInsideLoginToken,loginToken})
+                const loginToken = jwt.sign(infoInsideLoginToken, process.env.JWT_SECRET, {expiresIn:"24h"});
+                res.send({loginToken})
             } else {
                 res.send("didn't match")
             }
