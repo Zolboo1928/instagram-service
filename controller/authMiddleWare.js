@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken")
 
 const authMiddleware = async(req,res,next)=>{
 try {
-        const token = window.localStorage.getItem("authorization");
+        const token  = req.headers["authorization"]
         const splittedToken = token.split(" ")[1]
         if (!splittedToken) res.send("no token");
         const decodedtoken = jwt.verify(
