@@ -11,10 +11,11 @@ try {
         );
         if(decodedtoken) {
             next()
+        } else {
+            res.send("invalid token");
         }
 } catch (error) {
-    res.send("invalid token");
+    res.send(error)
 }
-
 }
 module.exports = authMiddleware
