@@ -3,8 +3,8 @@ const postModel = require("../../models/postModel");
 
 const getPostById = async(req,res)=>{
     try {
-        const {PostId} = req.body
-        const post = await postModel.findById(PostId).populate("comments");
+        const postId = req.headers["postId"]
+        const post = await postModel.findById(postId).populate("comments");
         res.send(post)
     } catch (error) {
         res.send(error)
