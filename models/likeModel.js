@@ -1,4 +1,4 @@
-const { Schema, mongoose, mongo } = require("mongoose");
+const { Schema, mongoose } = require("mongoose");
 
 const likeSchema = new Schema({
   likedUser: ({ type: mongoose.Types.ObjectId,ref:"users",requied:true }),
