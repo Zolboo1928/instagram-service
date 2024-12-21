@@ -6,7 +6,7 @@ const commentSchema = new Schema(
     userId: { type: mongoose.Types.ObjectId, required: true, ref: "users" },
     commentedPostId: { type: mongoose.Types.ObjectId, required: true },
   },
-  { timeStamps: true }
+  { timestamps: true }
 );
 const commentModel = mongoose.model("comments",commentSchema)
 module.exports = commentModel

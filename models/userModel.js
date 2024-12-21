@@ -8,8 +8,7 @@ const userSchema = new Schema(
     posts: [{ type: mongoose.Types.ObjectId, ref: "posts" }],
     following: [{ type: mongoose.Types.ObjectId , ref:"users"}],
     followers: [{ type: mongoose.Types.ObjectId , ref:"users"}],
-  },
-  { timeStamps: true }
+  }
 );
 
 const userModel = mongoose.model("users", userSchema)

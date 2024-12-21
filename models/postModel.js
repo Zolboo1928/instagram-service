@@ -7,7 +7,7 @@ const postSchema = new Schema(
     comments: [{ type: mongoose.Types.ObjectId, ref: "comments" }],
     likedUsers: [{ type: mongoose.Types.ObjectId, ref: "users" }],
   },
-  { timeStamps: true }
+  { timestamps:true }
 );
 
 const postModel = mongoose.model("posts", postSchema);
