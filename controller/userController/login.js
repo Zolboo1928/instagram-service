@@ -16,6 +16,7 @@ try {
                   _id: user._id,
                   userName: user.userName,
                   email: user.email,
+                  profileImage:user.profileImage
                 };
                 const loginToken = jwt.sign(infoInsideLoginToken, process.env.JWT_SECRET, {expiresIn:"24h"});
                 res.send({loginToken})

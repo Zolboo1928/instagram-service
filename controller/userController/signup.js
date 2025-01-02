@@ -15,10 +15,10 @@ const signUp = async (req, res) => {
     });
     const jwtSecretKeySignUp =  process.env.JWT_SECRET;
     const jwtUser = {
-      userName:createdUser.userName,
-      password:createdUser.password,
+      _id:createdUser._id,
       email:createdUser.email,
-      profileImage:createdUser.profileImage
+      profileImage:createdUser.profileImage,
+      userName:createdUser.userName
     }
     const tokenSignUp = jwt.sign(jwtUser,jwtSecretKeySignUp,{expiresIn:"24h"})
     res.send({tokenSignUp});
