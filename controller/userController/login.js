@@ -14,6 +14,7 @@ try {
             } else if (isMatch){
                 const infoInsideLoginToken = {
                   _id: user._id,
+                  userName: user.userName,
                   email: user.email,
                 };
                 const loginToken = jwt.sign(infoInsideLoginToken, process.env.JWT_SECRET, {expiresIn:"24h"});
