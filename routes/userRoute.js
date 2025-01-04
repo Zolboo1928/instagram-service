@@ -12,6 +12,7 @@ userRoute.post("/login", login)
 userRoute.post("/follow" ,authMiddleware, createNewFollower);
 userRoute.post("/unfollow", authMiddleware, unfollowUser);
 userRoute.get("/getUsers", authMiddleware,getUsers);
+userRoute.get("/getUserById", authMiddleware,getUserById)
 
 module.exports = userRoute
 
