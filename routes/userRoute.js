@@ -5,6 +5,7 @@ const unfollowUser = require('../controller/userController/unfollow')
 const getUsers = require('../controller/userController/getUsers')
 const authMiddleware = require('../controller/authMiddleWare')
 const login = require('../controller/userController/login')
+const getUserById = require('../controller/userController/getUserById')
 const userRoute = route()
 
 userRoute.post('/signup', signUp)
