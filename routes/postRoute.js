@@ -5,9 +5,9 @@ const addComment = require('../controller/postController/comment.js');
 const getComments = require('../controller/postController/getComments.js');
 const getPostById = require('../controller/postController/getPostById.js');
 const like = require('../controller/postController/like.js');
-const getPostsWithLikedUsers = require('../controller/postController/getPostsWithLikedUsers.js');
 const dislike = require('../controller/postController/dislike.js');
 const getPosts = require('../controller/postController/getPosts.js');
+const getPostWithLikedUsers = require('../controller/postController/getPostWithLikedUsers.js');
 const postRoute = route()
  
 postRoute.post("/uploadPost", uploadPost);
@@ -19,7 +19,7 @@ postRoute.get("/posts", getPosts);
 
 postRoute.get("/getPosts",getPost)
 postRoute.get("/getComments", getComments)
-postRoute.get("/getPostsWithLikedUsers", getPostsWithLikedUsers )
+postRoute.post("/getPostWithLikedUsers", getPostWithLikedUsers )
 postRoute.get('/getPostById/:postId',getPostById)
 
 module.exports = postRoute
