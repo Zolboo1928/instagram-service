@@ -6,6 +6,7 @@ const getUsers = require('../controller/userController/getUsers')
 const authMiddleware = require('../controller/authMiddleWare')
 const login = require('../controller/userController/login')
 const getUserById = require('../controller/userController/getUserById')
+const getPostsOfUserByUserId = require('../controller/userController/getPostsOfUserByUserId')
 const userRoute = route()
 
 userRoute.post('/signup', signUp)
@@ -14,6 +15,7 @@ userRoute.post("/follow" ,authMiddleware, createNewFollower);
 userRoute.post("/unfollow", authMiddleware, unfollowUser);
 userRoute.get("/getUsers", authMiddleware,getUsers);
 userRoute.post("/getUserById", authMiddleware,getUserById)
+userRoute.post("/getPostsOfUserByUserId", getPostsOfUserByUserId);
 
 module.exports = userRoute
 
