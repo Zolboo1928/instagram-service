@@ -4,7 +4,7 @@ const getFollowersOfUser = async(req,res)=>{
 try {
         const {userId} = req.body
         const user = await userModel.findById(userId).populate("followers");
-        res.send(user)
+        res.send(user.followers)
 } catch (error) {
     res.send(error)
 }
