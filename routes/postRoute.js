@@ -22,7 +22,7 @@ postRoute.get("/getPosts",getPost)
 postRoute.get("/getComments", getComments)
 postRoute.post("/getPostWithLikedUsers", getPostWithLikedUsers )
 postRoute.get('/getPostById/:postId',getPostById)
-postRoute.get("/getCommentsOfPost", getCommentsOfPost);
+postRoute.get("/getCommentsOfPost/:postId", getCommentsOfPost);
 
 module.exports = postRoute
 
